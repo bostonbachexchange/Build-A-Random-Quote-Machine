@@ -76,14 +76,18 @@ const colorVar = `rgb(${colorState.red}, ${colorState.green}, ${colorState.blue}
           <div style={{display: 'flex', alignItems: 'center', justifyContent: "space-between", marginTop: '10px'}}>
             <div >
               <a 
-              href={`https://twitter.com/intent/tweet?text=${quote.text} -${quote.author}`}
-              // href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(quote.text)}`}
-              target="_blank"
-              id="tweet-quote" >
-                <FontAwesomeIcon icon={faTwitterSquare} color={colorVar} style={{height: '4vh', marginRight: '8px'}}></FontAwesomeIcon>
+                href={`https://twitter.com/intent/tweet?text=${quote.text} -${quote.author}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                id="tweet-quote" >
+                  <FontAwesomeIcon icon={faTwitterSquare} color={colorVar} style={{height: '4vh', marginRight: '8px'}}></FontAwesomeIcon>
               </a>
-              <a href="#" id="tumblr">
-                <FontAwesomeIcon icon={faTumblrSquare} color={colorVar} style={{height: '4vh'}}></FontAwesomeIcon>
+              <a 
+                href={`https://www.tumblr.com/new/text=${quote.text} -${quote.author}`}
+                id="tumblr"
+                target="_blank"
+                rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faTumblrSquare} color={colorVar} style={{height: '4vh'}}></FontAwesomeIcon>
               </a>
             </div>
             <button scr="#" id="new-quote" style={{color: '#FFFFFF', backgroundColor: colorVar, border: '1px solid transparent', borderRadius: '3px', cursor: 'pointer', padding: '8px 18px 6px 18px'}}onClick={randomColor}><b>New Quote</b></button>
